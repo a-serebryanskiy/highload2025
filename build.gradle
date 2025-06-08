@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+    id("com.github.johnrengelman.shadow") version "8.1.1"
+}
+
+group = 'tech.ydb'
+version = '1.0'
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://packages.confluent.io/maven/"
+    }
+}
+
+dependencies {
+    implementation("io.gatling:gatling-core-java:3.14.3")
+    implementation("io.gatling:gatling-app:3.14.3")
+    implementation("io.gatling.highcharts:gatling-charts-highcharts:3.14.3")
+    implementation "org.galaxio:gatling-kafka-plugin_2.13:1.0.0-RC1"
+}
+
+test {
+    useJUnitPlatform()
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'tech.ydb.GatlingRunner'
+    }
+}
