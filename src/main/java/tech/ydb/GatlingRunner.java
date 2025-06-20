@@ -15,12 +15,5 @@ public class GatlingRunner {
                 "--simulation", simulationName,
                 "--results-folder", "target/gatling"
         });
-
-//        Gatling.main(new String[] {
-//                "-ro",
-//                "/Users/serebryanskiy/arcadia/kikimr/testing/configs/lbk/lbk-devslice-1/benchmark-scripts/kafka/redundancy-test/edge-tests/broker-edge-test-150mb/1920mbs-simulation",
-//                "--results-folder",
-//                "/Users/serebryanskiy/IdeaProjects/highload2025/target/results"
-//        });
     }
 }
